@@ -1,37 +1,35 @@
 import { useState } from 'react'
-import './App.css'
 import { Tweet } from 'react-tweet'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import './App.css'
+import TweetPage from "./pages/TweetPage"
+import SiteClosed from "./pages/SiteClosed"
 
-export const IndexPage = () => <Tweet id="1628832338187636740" />
+
+
 
 function App() {
 
   return (
-    <>
-    <div className="box">
-    <h1>Barry's Perspective</h1>
-      <h2>Site Closed</h2>
-      <div className="card">
-        <label for="password" name="password">Password: </label>
-        <input type="text" id="password" name="password" placeholder="Password..."></input>
-      </div>
-    </div>
-  
+    <Router>
+      <div>
+      <Link to="/">
+          <button>Home</button>
+        </Link>
 
-    <div className="tweetbox">
-      <div className="tweets"> <Tweet id="1789684389778956499" /> </div>
-      <div className="tweets"> <Tweet id="1780642682445967548" /> </div>
-      <div className="tweets"> <Tweet id="1780642682445967548" /> </div>
+      <Link to="/tweetpage">
+          <button>Go to TweetPage</button>
+       </Link>
+
+        <Routes>
+        <Route path="/" element={<SiteClosed />} />
+        <Route path="/tweetpage" element={<TweetPage />} />
+        </Routes>
       </div>
-  
-    </>
+    </Router>
+
 
   )
 }
 
 export default App
-/* 
-      <Tweet id="1789684389778956499" /> 
-      <Tweet id="1780642682445967548" />
-      <Tweet id="1777797186878689782" /> 
-*/

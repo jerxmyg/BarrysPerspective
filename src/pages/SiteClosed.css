@@ -1,0 +1,6 @@
+.box {
+    font-family:Papyrus, fantasy;
+    background-color: rgba(140, 122, 122, 0.8); /* Optionally make card slightly transparent */
+    padding: 20px;
+    border-radius: 8px;
+  }
