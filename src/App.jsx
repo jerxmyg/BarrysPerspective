@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import background from "./assets/bpstockimg1.png"
+import { Tweet } from 'react-tweet'
+
+export const IndexPage = () => <Tweet id="1628832338187636740" />
+
 function App() {
 
   return (
@@ -13,8 +16,22 @@ function App() {
         <input type="text" id="password" name="password" placeholder="Password..."></input>
       </div>
     </div>
+  
+
+    <div className="tweetbox">
+      <div className="tweets"> <Tweet id="1789684389778956499" /> </div>
+      <div className="tweets"> <Tweet id="1780642682445967548" /> </div>
+      <div className="tweets"> <Tweet id="1780642682445967548" /> </div>
+      </div>
+  
     </>
+
   )
 }
 
 export default App
+/* 
+      <Tweet id="1789684389778956499" /> 
+      <Tweet id="1780642682445967548" />
+      <Tweet id="1777797186878689782" /> 
+*/

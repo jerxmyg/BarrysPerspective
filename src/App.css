@@ -63,3 +63,17 @@ body {
   padding: 20px;
   border-radius: 8px;
 }
+
+.tweetbox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 200px;
+}
+
+.tweets {
+  height: 75px;
+  width: 400px;
+  margin: 0 5px;
+}
+
+
