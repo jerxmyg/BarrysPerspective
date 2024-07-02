@@ -1,7 +1,7 @@
 import { Tweet } from 'react-tweet'
 import './TweetPage.css'
 
-function TweetPage() {
+export const TweetPage = () => {
     
     return (
         <div>
@@ -17,4 +17,4 @@ function TweetPage() {
     
 }
 
-export default TweetPage
+export default TweetPage;

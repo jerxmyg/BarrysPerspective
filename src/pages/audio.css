@@ -1,0 +1,27 @@
+/* Container for the audio player */
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Stick to the viewport */
+    bottom: 0; /* Align at the bottom */
+    left: 0; /* Start from the left edge */
+    width: 100%; /* Stretch across the full width */
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add background color with some transparency */
+    padding: 10px 0; /* Optional: Add some padding */
+}
+
+/* Minimalist style for the audio player */
+audio {
+    width: 100%; /* Adjust width as needed */
+    max-width: 300px; /* Maximum width for larger screens */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+}
+
+/* Hide default controls (if you want to create custom controls) */
+/*
+audio::-webkit-media-controls {
+    display: none !important;
+}
+*/

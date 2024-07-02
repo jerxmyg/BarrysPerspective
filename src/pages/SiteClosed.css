@@ -1,6 +1,27 @@
 .box {
-    font-family:Papyrus, fantasy;
-    background-color: rgba(140, 122, 122, 0.8); /* Optionally make card slightly transparent */
-    padding: 20px;
-    border-radius: 8px;
-  }
+  font-family: Papyrus, fantasy;
+  width: 480px;
+  display: flex; /* Added to make flexbox properties effective */
+  flex-direction: column; /* Aligns children vertically */
+  align-items: center; /* Center aligns children horizontally */
+  justify-content: center; /* Centers children vertically */
+  background-color: rgba(140, 122, 122, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  margin: auto; /* Optionally center the box on the page horizontally */
+  margin-top: 50px; /* Optionally add some space at the top */
+}
+
+.card {
+  padding: 2em;
+}
+
+body {
+  background-image: url('./assets/tweetpage.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  margin: 0;
+  height: 100vh; 
+  width: 100%;
+}
