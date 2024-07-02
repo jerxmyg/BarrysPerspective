@@ -15,7 +15,7 @@ export const SiteClosed = () => {
 
         <div className="audio-container">
                 <audio controls autoPlay loop>
-                    <source src="/audio/music.mp3" type="audio/mpeg" />
+                    <source src="./audio/music.mp3" type="audio/mpeg" />
                     Your browser does not support the audio element.
                 </audio>
             </div>
