@@ -5,11 +5,14 @@ export const TweetPage = () => {
     
     return (
         <div>
-            <h1> Barry's Perspective </h1>
+            <div className="title">
+                <h1>Barry's Tweets</h1>
+            </div>
             <div className="tweetbox">
                 <div className="tweets"> <Tweet id="1789684389778956499" /> </div>
                 <div className="tweets"> <Tweet id="1780642682445967548" /> </div>
                 <div className="tweets"> <Tweet id="1780642682445967548" /> </div>
+                
             </div>
 
         </div>
