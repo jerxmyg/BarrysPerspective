@@ -1,32 +1,57 @@
 .tweetbox {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  }
+  flex-wrap: wrap;
+  justify-content: center; /* Ensures that items are centered horizontally */
+  padding: 0px; /* Adds some padding around the tweets */
+  max-width: 1260px; /* Maximum width of the tweetbox to contain 3 tweets nicely */
+  margin: auto; /* Centers the tweetbox horizontally on the page */
+}
 
 .title {
   background-color: rgba(128, 128, 128, 0.412);
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  }
+  margin-bottom: -70px; /* Reduce or adjust this value as needed */
+  
+}
 
+.tweets {
+  height: 200px; /* Adjusted height for better visualization */
+  width: 400px; /* Width as per each tweet's requirement */
+  margin: 70px 10px; /* Margin around each tweet for spacing */
+  
+ 
+}
+
+@media (max-width: 1200px) {
   .tweets {
-    height: 75px;
-    width: 400px;
-    margin: 0 5px;
+    width: 300px; /* Smaller width for smaller screens */
   }
+  .title {
+    margin-bottom: 0px;
+  }
+}
 
-  @media (max-width: 460px) {
-    .tweetbox {
-      padding: 10px;
-      margin-top: 20px;
-    }
-    .tweets {
-      height: 20px;
-      width: 10px;
-      
-    }
+@media (max-width: 800px) {
+  .tweets {
+    width: 200px; /* Even smaller width for mobile devices */
   }
+  .title {
+    margin-bottom: 0px;
+  }
+}
+
+@media (max-width: 460px) {
+  .tweetbox {
+    justify-content: space-around; /* Changes to space around for better spacing on very small screens */
+  }
+  .tweets {
+    width: 90%; /* Full width tweets on very small screens */
+    margin: 5px 0; /* Only vertical margin */
+    height: auto; /* Height is automatic to adjust the content */
+  }
+  .title {
+    margin-bottom: 0px;
+  }
+}

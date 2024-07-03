@@ -6,7 +6,7 @@ export const SiteClosed = () => {
         <>
         <div className="box">
             <h1>Barry's Perspective</h1>
-            <h2>Site Closed</h2>
+            <h2>Coming Soon</h2>
             <div className="card">
                 <label htmlFor="password">Password: </label>
                 <input type="text" id="password" name="password" placeholder="Password..." />
