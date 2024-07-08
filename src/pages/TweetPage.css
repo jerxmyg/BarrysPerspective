@@ -9,17 +9,18 @@
 
 .title {
   background-color: rgba(128, 128, 128, 0.412);
+  font-family: Papyrus, fantasy;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: -70px; /* Reduce or adjust this value as needed */
+  margin-bottom: -125px; /* Reduce or adjust this value as needed */
   
 }
 
 .tweets {
   height: 200px; /* Adjusted height for better visualization */
   width: 400px; /* Width as per each tweet's requirement */
-  margin: 70px 10px; /* Margin around each tweet for spacing */
+  margin: 110px 10px; /* Margin around each tweet for spacing */
   
  
 }

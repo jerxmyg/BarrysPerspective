@@ -9,13 +9,13 @@ export const TweetPage = () => {
                 <h1>Barry's Tweets</h1>
             </div>
             <div className="tweetbox">
-                <div className="tweets"> <Tweet id="1789684389778956499" /> </div>
-                <div className="tweets"> <Tweet id="1780642682445967548" /> </div>
-                <div className="tweets"> <Tweet id="1780642682445967548" /> </div>
+                <div className="tweets"> <Tweet id="1572578002873257984" /> </div>
+                <div className="tweets"> <Tweet id="1575476821507850240" /> </div>
+                <div className="tweets"> <Tweet id="1580574821192040449" /> </div>
                 
-                <div className="tweets"><Tweet id="1789684389778956499" /></div>
-                <div className="tweets"><Tweet id="1780642682445967548" /></div>
-                <div className="tweets"><Tweet id="1780642682445967548" /></div>
+                <div className="tweets"><Tweet id="1585983422652350469" /></div>
+                <div className="tweets"><Tweet id="1588553459749355521" /></div>
+                <div className="tweets"><Tweet id="1739338852039282688" /></div>
             </div>
             
             <div className="audio-container">
