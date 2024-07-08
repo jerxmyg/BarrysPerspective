@@ -1,7 +1,10 @@
 import './SiteClosed.css';
 import './audio.css'; 
+import RaffleForm from '../components/RaffleForm';
 
 export const SiteClosed = () => {
+
+
     return (
         <>
         <div className="box">
@@ -12,6 +15,8 @@ export const SiteClosed = () => {
                 <input type="text" id="password" name="password" placeholder="Password..." />
             </div>
         </div>
+
+        <RaffleForm />
 
         <div className="audio-container">
                 <audio controls autoPlay loop>

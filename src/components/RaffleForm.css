@@ -1,0 +1,68 @@
+.raffle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+h1 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+  
+  form {
+    align-content: center;
+    background: rgba(0, 0, 0, 0.831);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: 20vh;
+
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    border-color: #ffffff;
+    outline: none;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  #msg {
+    display: block;
+    margin-top: 10px;
+    color: green;
+    font-size: 14px;
+  }
+  
