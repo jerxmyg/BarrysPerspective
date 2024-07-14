@@ -16,7 +16,7 @@ export const SiteClosed = () => {
             </div>
         </div>
 
-        <RaffleForm />
+        
 
         <div className="audio-container">
                 <audio controls autoPlay loop>
