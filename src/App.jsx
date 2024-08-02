@@ -4,6 +4,7 @@ import './App.css'
 import { Navbar } from './components/Navbar';
 import { TweetPage } from './pages/TweetPage';
 import { SiteClosed } from './pages/SiteClosed';
+import { Shop } from './pages/Shop';
 
 
 function App() {

@@ -1,0 +1,14 @@
+.product-listing {
+    display: inline-block;
+    width: 800px;
+    margin: 2.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product-img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
