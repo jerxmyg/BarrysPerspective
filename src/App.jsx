@@ -13,7 +13,7 @@ function App() {
     <div className="Navbar">
       <Navbar />
       <Routes>
-        <Route path='/' element={<SiteClosed/>} />
+        <Route path='/' element={<Shop/>} />
         <Route path='/tweets' element={<TweetPage/>} />
       </Routes>
     </div>

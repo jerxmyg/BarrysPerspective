@@ -1,7 +1,65 @@
+import React, { useEffect, useState } from 'react';
+import fetchProducts from '../components/shopifyService';
 import './Shop.css'
-import IMAGE from '../assets/bplogo.png'
+
 
 export const Shop = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        const fetchedProducts = await fetchProducts();
+        setProducts(fetchedProducts);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+
+    loadProducts();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  return (
+    <div className="product-list">
+      {products.length > 0 ? (
+        products.map((product) => (
+          <div key={product.id} className="product-card">
+            <img src={product.image} alt={product.title} />
+            <h2>{product.title}</h2>
+            <p>{product.price} {product.currency}</p>
+          </div>
+        ))
+      ) : (
+        <div>No products available</div>
+      )}
+    </div>
+  );
+};
+
+export default Shop;
+
+
+
+
+
+
+
+
+
+
+/*export const Shop = () => {
     return (
         <div>
             <h1> Capsule #??? </h1>
@@ -43,4 +101,4 @@ export const Shop = () => {
         </div>
 
     )
-}
+} */
