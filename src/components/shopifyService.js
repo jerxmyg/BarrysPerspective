@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const SHOPIFY_API_URL = 'https://e9d82a-03.myshopify.com/api/2023-10/graphql.json';
-const ACCESS_TOKEN = 'fab668fa726d3696985fcda0f7efb88a';
+const ACCESS_TOKEN = import.meta.env.VITE_ACCESS_TOKEN;
+const SHOPIFY_API_URL = import.meta.env.VITE_SHOPIFY_API_URL;
 
 const fetchProducts = async () => {
   const query = `
