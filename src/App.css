@@ -2,9 +2,9 @@
   background-image: url('./assets/siteclosed.jpg');
   background-size: cover; 
   background-position: center; 
-  background-repeat: no-repeat; 
+  background-repeat: repeat; 
   margin: 0;
-  height: 100vh; 
+  height: 300vh; 
   width: 100%;
 }
 

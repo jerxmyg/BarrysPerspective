@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import fetchProducts from '../components/shopifyService';
-import './Shop.css'
+import ProductPage from '../components/ProductPage'; // Update the path if necessary
+import './Shop.css';
+import './audio.css';
+
 
 
 export const Shop = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate(); // Hook to navigate programmatically
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -23,6 +28,13 @@ export const Shop = () => {
     loadProducts();
   }, []);
 
+  const handleViewProduct = (id) => {
+    if (products.length > 0) {
+      navigate(`/shop/product/${id.split("/").pop()}`);
+    }
+  };
+  
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -32,73 +44,46 @@ export const Shop = () => {
   }
 
   return (
-    <div className="product-list">
-      {products.length > 0 ? (
-        products.map((product) => (
-          <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.title} />
-            <h2>{product.title}</h2>
-            <p>{product.price} {product.currency}</p>
-          </div>
-        ))
-      ) : (
-        <div>No products available</div>
-      )}
+    <div>
+      <Routes>
+        {/* Route for displaying the product list */}
+        <Route
+          path="*"
+          element={
+            <div className="product-list">
+              {products.length > 0 ? (
+                products.map((product) => (
+                  <div
+                    key={product.id}
+                    className="product-card"
+                    onClick={() => handleViewProduct(product.id)}
+                  >
+                    <img src={product.image} alt={product.title} />
+                    <h2>{product.title}</h2>
+                    <p>
+                      {product.price} {product.currency}
+                    </p>
+                  </div>
+                ))
+              ) : (
+                <div>No products available</div>
+              )}
+              <div className="audio-container">
+                <audio controls autoPlay loop>
+                  <source src="./audio/music.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          }
+        />
+
+        {/* Route for displaying a specific product */}
+        <Route path="/shop/product/:productId" element={<ProductPage products={products} />} />
+        
+      </Routes>
     </div>
   );
 };
 
 export default Shop;
-
-
-
-
-
-
-
-
-
-
-/*export const Shop = () => {
-    return (
-        <div>
-            <h1> Capsule #??? </h1>
-            <div className="product-listing">
-                <img className="product-img" src={IMAGE} alt='default'/>
-                <h2> Item #1 </h2>
-                <h3> $50.00 </h3>
-            </div>
-
-            <div className="product-listing">
-                <img className="product-img" src={IMAGE} alt='default'/>
-                <h2> Item #2 </h2>
-                <h3> $50.00 </h3>
-            </div>
-
-            <div className="product-listing">
-                <img className="product-img" src={IMAGE} alt='default'/>
-                <h2> Item #3 </h2>
-                <h3> $50.00 </h3>
-            </div>
-
-            <div className="product-listing">
-                <img className="product-img" src={IMAGE} alt='default'/>
-                <h2> Item #4 </h2>
-                <h3> $50.00 </h3>
-            </div>
-
-            <div className="product-listing">
-                <img className="product-img" src={IMAGE} alt='default'/>
-                <h2> Item #5 </h2>
-                <h3> $50.00 </h3>
-            </div>
-
-            <div className="product-listing">
-                <img className="product-img" src={IMAGE} alt='default'/>
-                <h2> Item #6 </h2>
-                <h3> $50.00 </h3>
-            </div>
-        </div>
-
-    )
-} */
