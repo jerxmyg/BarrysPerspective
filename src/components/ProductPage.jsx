@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useCart } from "../components/CartContext";
 import { useParams, useNavigate } from "react-router-dom";
 import fetchProducts from "../components/shopifyService"; // Ensure the service path is correct
-import "../pages/Shop.css";
+import "./ProductPage.css";
 
 const ProductPage = ({ products }) => {
   const { productId } = useParams(); // Extract productId from the URL
@@ -54,16 +54,24 @@ const ProductPage = ({ products }) => {
       payload: { ...product, quantity: 1 },
     });
   };
+  const formatCurrency = (price) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(price);
+  };
 
   return (
     <div className="product-page">
-      <img src={product.image} alt={product.title} />
-      <h1>{product.title}</h1>
-      <p>
-        Price: {product.currency} {product.price}
-      </p>
-      <button onClick={handleAddToCart}>Add to Cart</button>
-      <button onClick={() => navigate(-1)}>Go Back</button>
+      <div className="product-page_left">
+        <img src={product.image} alt={product.title} />
+      </div>
+      <div className="product-page_right">
+        <h1>{product.title}</h1>
+        <p> {product.currency} {formatCurrency(product.price)}</p>
+        <button onClick={handleAddToCart}>Add to Cart</button>
+        <button onClick={() => navigate(-1)}>Go Back</button>
+      </div>
     </div>
   );
 };

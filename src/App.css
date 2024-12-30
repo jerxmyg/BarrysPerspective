@@ -1,12 +1,20 @@
- #root {
-  background-image: url('./assets/siteclosed.jpg');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: repeat; 
+#root {
   margin: 0;
-  height: 300vh; 
-  width: 100%;
+  padding: 0;
+  height: 100%; /* Allow children to define their height */
+  width: 100%; /* Allow children to define their width */
+  display: flex;
+  flex-direction: column;
 }
+
+.App-content {
+
+  height: 100%; /* Full viewport height */
+  width: 100%; /* Full viewport width */
+  
+  
+}
+
 
 
 

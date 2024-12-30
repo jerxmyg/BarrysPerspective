@@ -1,0 +1,63 @@
+/* Main container */
+.product-page {
+    display: flex;
+    flex-direction: row;
+    gap: 0; /* No space between left and right sections */
+    margin: 0; /* No external margins */
+    padding: 0; /* No internal padding */
+    align-items: center; /* Vertically align content */
+    justify-content: space-between; /* Full spread of left and right columns */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    box-sizing: border-box;
+    /* background-image: url('../assets/tweetpage.jpg'); Use your background image */
+    background-size: cover; /* Stretch the background image */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent repeating the background */
+}
+
+
+/* Left column for the image */
+.product-page_left {
+    flex: 1; /* Takes up 50% of the width */
+    display: flex;
+    justify-content: flex-start; /* Align image to the far left */
+    align-items: center; /* Vertically center the image */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product-page_left img {
+    width: auto; /* Maintain the original width of the image */
+    height: 100vh; /* Maintain the original height of the image */
+    max-width: 100%; /* Prevent the image from overflowing the column */
+    max-height: 100%; /* Prevent the image from overflowing vertically */
+    object-fit: contain; /* Preserve the image aspect ratio */
+}
+
+/* Right column for product details */
+.product-page_right {
+    flex: 1; /* Takes up 50% of the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    gap: 20px; /* Space between elements */
+    text-align: center; /* Align text centrally */
+}
+
+/* Buttons styling */
+.product-page_right button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.product-page_right button:hover {
+    background-color: #0056b3;
+}
